@@ -18,7 +18,7 @@ for i = 1:length(n_values)
     
     tic;
     y = toeplitz(u(m_values(i):n_values(i)), u(m_values(i):-1:1)) * w;
-    t = toc
+    t = toc;
     fprintf(1,'Time for standard multiplication: %f\n', t);
     fprintf(1,'Relative error between the two results: %e\n\n', norm(yf-y)/norm(y));
     end
