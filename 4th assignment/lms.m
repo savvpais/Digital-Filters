@@ -1,4 +1,4 @@
-function [y, w, e] = my_lms(u, d, M)
+function [y, w, e] = lms(u, d, M)
 
 u = u(:);
 d = d(:);
