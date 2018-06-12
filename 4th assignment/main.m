@@ -6,14 +6,14 @@ u = zeros(1, n);
 d = zeros(size(u));
 s = zeros(size(u));
 x = zeros(size(u));
-sigma1d = 0.73;
-sigma2d = 0.39;
+sigma1d = 0.42;
+sigma2d = 0.72;
 v1 = sqrt(sigma1d) * randn(n, 1);
 v2 = sqrt(sigma2d) * randn(n, 1);
 
 for i = 4:1:n
-    u(i) = -0.87 * u(i - 1) - 0.12 * u(i - 2) - 0.032 * u(i - 3) + v1(i);
-    s(i) = -0.23 * u(i) + 0.67 * u(i - 1) - 0.18 * u(i - 2) + 0.39 * u(i - 3);
+    u(i) = -0.87 * u(i - 1) - 0.22 * u(i - 2) - 0.032 * u(i - 3) + v1(i);
+    s(i) = -0.13 * u(i) + 0.67 * u(i - 1) - 0.18 * u(i - 2) + 0.39 * u(i - 3);
     x(i) = -0.57 * x(i - 1) - 0.16 * x(i - 2) - 0.08 * x(i - 3) + v2(i);
     d(i) = s(i) + x(i);
 end
